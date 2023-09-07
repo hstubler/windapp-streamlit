@@ -1,0 +1,6 @@
+influxdb_client
+pandas
+arrow
+matplotlib
+seaborn
+streamlit
