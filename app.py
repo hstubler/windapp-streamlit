@@ -6,13 +6,9 @@ import arrow
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-org = "a286e8b76dbe1c10"
-bucket = "hstubler"
-# token = 'eN3f7y3tnzWoiJl5sb9-OwhCcGwYluXH37Jm-wYcF_k1cv5QZ7tscq3Gwcw-bb_on-E49pGi69hnxOLq9TCNgA=='
-token = "LQECoOJHlfjBBy51xpOIFy6KSn1R170Nwb1KJw2oHE2-FkbZSAHOOVbQAMDj1K5Up-8ydpnrgw1eE4BsoN_eIQ=="
-url = "http://10.111.0.113:8086"
 
-client = InfluxDBClient(url=url, token=token, org=org, timeout=1080_000)
+client = InfluxDBClient(url=st.secrets['url'], token=st.secrets['token'], org=st.secrets['org'], timeout=1080_000)
+# client = InfluxDBClient(url=url, token=token, org=org, timeout=1080_000)
 
 time = "2023-06-17T18:30:07.394Z"
 
