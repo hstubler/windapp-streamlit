@@ -26,7 +26,7 @@ def get_wind_data(time, shift):
         query = query.replace("{startTime}", start)
         query = query.replace("{stopTime}", end)
 
-    result = client.query_api().query_data_frame(org=st.secrets["org"], query=query)
+    result = client.query_api().query_data_frame(org=st.secrets.db_credentials.org, query=query)
     df = result.dropna()
     df = df.rename(columns={"boat": "mark", "_time": "DATETIME"})[
         [
