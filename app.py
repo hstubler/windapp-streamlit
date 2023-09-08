@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-client = InfluxDBClient(url=st.secrets["url"], token=st.secrets["token"], org=st.secrets["org"], timeout=1080_0000)
+client = InfluxDBClient(url=st.secrets["url"], token=st.secrets["token"], org=st.secrets.db_credentials.org, timeout=1080_000)
 # client = InfluxDBClient(url=url, token=token, org=org, timeout=1080_000)
 
 time = "2023-06-17T18:30:07.394Z"
